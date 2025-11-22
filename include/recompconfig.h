@@ -23,16 +23,16 @@ RECOMP_IMPORT("*", void recomp_change_save_file(const char* filename));
 // Returns a UTF-8 encoded zero-terminated string containing the absolute path to the current save file.
 // The return type is an unsigned char pointer to indicate the UTF-8 encoding.
 // `recomp_free` (found in `recomputils.h`) MUST be called on the return value of this when the value is no longer in use to prevent a memory leak.
-RECOMP_IMPORT("*", unsigned char* recomp_get_save_file_path());
+RECOMP_IMPORT("*", unsigned char* recomp_get_save_file_path(void));
 
 // Returns a UTF-8 encoded zero-terminated string containing the absolute path to the current game's mod folder.
 // The return type is an unsigned char pointer to indicate the UTF-8 encoding.
 // `recomp_free` (found in `recomputils.h`) MUST be called on the return value of this when the value is no longer in use to prevent a memory leak.
-RECOMP_IMPORT("*", unsigned char* recomp_get_mod_folder_path());
+RECOMP_IMPORT("*", unsigned char* recomp_get_mod_folder_path(void));
 
 // Returns a UTF-8 encoded zero-terminated string containing the absolute path to the mod that called this function (i.e. the path to the .nrm file).
 // The return type is an unsigned char pointer to indicate the UTF-8 encoding.
 // `recomp_free` (found in `recomputils.h`) MUST be called on the return value of this when the value is no longer in use to prevent a memory leak.
-RECOMP_IMPORT("*", unsigned char* recomp_get_mod_file_path());
+RECOMP_IMPORT("*", unsigned char* recomp_get_mod_file_path(void));
 
 #endif

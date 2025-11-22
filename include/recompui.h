@@ -153,7 +153,7 @@ typedef struct {
 #define RECOMPUI_NULL_RESOURCE (0xFFFFFFFFUL)
 
 // Contexts
-RECOMP_IMPORT("*", RecompuiContext recompui_create_context());
+RECOMP_IMPORT("*", RecompuiContext recompui_create_context(void));
 RECOMP_IMPORT("*", void recompui_open_context(RecompuiContext context));
 RECOMP_IMPORT("*", void recompui_close_context(RecompuiContext context));
 RECOMP_IMPORT("*", RecompuiResource recompui_context_root(RecompuiContext context));

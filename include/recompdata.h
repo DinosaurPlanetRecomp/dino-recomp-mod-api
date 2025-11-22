@@ -23,7 +23,7 @@ typedef unsigned long U32ValueHashmapHandle;
 
 // Creates a hashmap that maps u32 keys to u32 values.
 // Returns the handle for that hashmap.
-RECOMP_IMPORT("*", U32ValueHashmapHandle recomputil_create_u32_value_hashmap());
+RECOMP_IMPORT("*", U32ValueHashmapHandle recomputil_create_u32_value_hashmap(void));
 
 // Destroys a u32 -> u32 hashmap.
 RECOMP_IMPORT("*", void recomputil_destroy_u32_value_hashmap(U32ValueHashmapHandle handle));
@@ -89,7 +89,7 @@ typedef unsigned long U32HashsetHandle;
 
 // Creates a hashset of u32 keys.
 // Returns the handle for that hashset.
-RECOMP_IMPORT("*", U32HashsetHandle recomputil_create_u32_hashset());
+RECOMP_IMPORT("*", U32HashsetHandle recomputil_create_u32_hashset(void));
 
 // Destroys a u32 hashset.
 RECOMP_IMPORT("*", void recomputil_destroy_u32_hashset(U32HashsetHandle handle));
@@ -118,7 +118,7 @@ typedef unsigned long U32SlotmapHandle;
 
 // Creates a slotmap with u32 elements.
 // Returns the handle for that slotmap.
-RECOMP_IMPORT("*", U32SlotmapHandle recomputil_create_u32_slotmap());
+RECOMP_IMPORT("*", U32SlotmapHandle recomputil_create_u32_slotmap(void));
 
 // Destroys a u32 slotmap.
 RECOMP_IMPORT("*", void recomputil_destroy_u32_slotmap(U32SlotmapHandle handle));

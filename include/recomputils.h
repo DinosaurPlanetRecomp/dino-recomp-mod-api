@@ -12,17 +12,17 @@ RECOMP_IMPORT("*", void recomp_free(void *ptr))
 // These functions let you get the return value of a function from within a return hook for that function.
 // Calling these outside of a return hook will give an undefined result.
 // Calling the function for a return type that doesn't match the function's actual return type also gives an undefined result.
-RECOMP_IMPORT("*", long recomphook_get_return_s32());
-RECOMP_IMPORT("*", unsigned long recomphook_get_return_u32());
-RECOMP_IMPORT("*", void* recomphook_get_return_ptr());
-RECOMP_IMPORT("*", short recomphook_get_return_s16());
-RECOMP_IMPORT("*", unsigned short recomphook_get_return_u16());
-RECOMP_IMPORT("*", signed char recomphook_get_return_s8());
-RECOMP_IMPORT("*", unsigned char recomphook_get_return_u8());
-RECOMP_IMPORT("*", long long recomphook_get_return_s64());
-RECOMP_IMPORT("*", unsigned long long recomphook_get_return_u64());
-RECOMP_IMPORT("*", float recomphook_get_return_float());
-RECOMP_IMPORT("*", double recomphook_get_return_double());
+RECOMP_IMPORT("*", long recomphook_get_return_s32(void));
+RECOMP_IMPORT("*", unsigned long recomphook_get_return_u32(void));
+RECOMP_IMPORT("*", void* recomphook_get_return_ptr(void));
+RECOMP_IMPORT("*", short recomphook_get_return_s16(void));
+RECOMP_IMPORT("*", unsigned short recomphook_get_return_u16(void));
+RECOMP_IMPORT("*", signed char recomphook_get_return_s8(void));
+RECOMP_IMPORT("*", unsigned char recomphook_get_return_u8(void));
+RECOMP_IMPORT("*", long long recomphook_get_return_s64(void));
+RECOMP_IMPORT("*", unsigned long long recomphook_get_return_u64(void));
+RECOMP_IMPORT("*", float recomphook_get_return_float(void));
+RECOMP_IMPORT("*", double recomphook_get_return_double(void));
 
 typedef enum {
     // The dependency was found and the version requirement was met.
@@ -58,16 +58,17 @@ typedef enum {
 } RecompHUDRatio;
 
 RECOMP_IMPORT("*", void recomp_get_window_resolution(unsigned long *width, unsigned long *height))
-RECOMP_IMPORT("*", RecompAspectRatio recomp_get_aspect_ratio_mode())
-RECOMP_IMPORT("*", float recomp_get_aspect_ratio())
-RECOMP_IMPORT("*", RecompHUDRatio recomp_get_hud_ratio_mode())
-RECOMP_IMPORT("*", int recomp_get_refresh_rate())
+RECOMP_IMPORT("*", RecompAspectRatio recomp_get_aspect_ratio_mode(void))
+RECOMP_IMPORT("*", float recomp_get_aspect_ratio(void))
+RECOMP_IMPORT("*", RecompHUDRatio recomp_get_hud_ratio_mode(void))
+RECOMP_IMPORT("*", int recomp_get_refresh_rate(void))
+RECOMP_IMPORT("*", int recomp_get_60fps_enabled(void))
 
 RECOMP_IMPORT("*", void recomp_error_message_box(const char *message))
 RECOMP_IMPORT("*", void recomp_exit_with_error(const char *message))
-RECOMP_IMPORT("*", void recomp_exit())
+RECOMP_IMPORT("*", void recomp_exit(void))
 RECOMP_IMPORT("*", float recomp_powf(float x, float y))
-RECOMP_IMPORT("*", unsigned long recomp_time_us())
+RECOMP_IMPORT("*", unsigned long recomp_time_us(void))
 
 RECOMP_IMPORT("*", int recomp_sprintf(char *s, const char *fmt, ...))
 RECOMP_IMPORT("*", int recomp_vsprintf(char *s, const char *fmt, va_list args))
