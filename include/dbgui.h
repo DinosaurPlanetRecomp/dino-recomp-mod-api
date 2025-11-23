@@ -3,6 +3,10 @@
 
 #include "modding.h"
 
+// Invoked at the start of every game_tick (after recomp_on_game_tick_start).
+// Debug UI functions are only allowed during this event.
+#define RECOMP_ON_DBGUI_CALLBACK RECOMP_CALLBACK("*", recomp_on_dbgui)
+
 typedef struct {
     float x, y;
 } DbgUiPos;
