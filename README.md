@@ -11,6 +11,6 @@ Please see the [Recomp Modding](https://hackmd.io/fMDiGEJ9TBSjomuZZOgzNg) docume
 > You will also need the [Decomp Bridge](https://github.com/DinosaurPlanetRecomp/dino-recomp-decomp-bridge) to create your mod. Please see the [official mod template](https://github.com/DinosaurPlanetRecomp/dino-recomp-mod-template) for an example setup.
 
 ## Versioning
-Mod API releases are associated with a specific version of the recomp. For example, to target version 0.1.2 of the recomp you would use version 0.1.2 of this repository. The `minimum_recomp_version` property of your mod's TOML manifest should equal the recomp version targeted by the checked out commit of this repository.
+Mod API releases are associated with a specific version of the recomp. For example, to target version 0.1.2 of the recomp you would use version 0.1.2 of this repository. The `minimum_recomp_version` property of your mod's TOML manifest should equal the version of this repository that you compile against.
 
-Please do not use commits ahead of the latest tagged version for stable published mods as it does not guarantee your mod will work correctly on any stable recomp release.
+Please do not use commits ahead of the latest tagged version for published mods as it does not guarantee your mod will work correctly on any stable recomp release.
