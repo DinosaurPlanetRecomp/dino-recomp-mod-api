@@ -41,13 +41,19 @@ typedef enum {
 RECOMP_IMPORT("*", long dbgui_begin(const char *str, long *open))
 RECOMP_IMPORT("*", void dbgui_end(void))
 RECOMP_IMPORT("*", void dbgui_text(const char *text))
+RECOMP_IMPORT("*", void dbgui_text_wrapped(const char *text))
 RECOMP_IMPORT("*", void dbgui_label_text(const char *label, const char *text))
 RECOMP_IMPORT("*", void dbgui_same_line(void));
 RECOMP_IMPORT("*", void dbgui_new_line(void));
 RECOMP_IMPORT("*", void dbgui_separator(void));
+RECOMP_IMPORT("*", void dbgui_separator_text(const char *label));
+RECOMP_IMPORT("*", void dbgui_indent(float width));
+RECOMP_IMPORT("*", void dbgui_unindent(float width));
+RECOMP_IMPORT("*", void dbgui_bullet(void));
 RECOMP_IMPORT("*", long dbgui_begin_combo(const char *label, const char *preview))
 RECOMP_IMPORT("*", void dbgui_end_combo(void))
 RECOMP_IMPORT("*", long dbgui_selectable(const char *label, long selected))
+RECOMP_IMPORT("*", long dbgui_radio_button(const char *label, long active))
 RECOMP_IMPORT("*", long dbgui_button(const char *label))
 RECOMP_IMPORT("*", long dbgui_is_open(void))
 RECOMP_IMPORT("*", long dbgui_begin_main_menu_bar(void))
@@ -88,6 +94,9 @@ RECOMP_IMPORT("*", void dbgui_end_tab_item(void))
 RECOMP_IMPORT("*", void dbgui_push_str_id(const char *str_id))
 RECOMP_IMPORT("*", void dbgui_pop_id(void))
 RECOMP_IMPORT("*", long dbgui_is_item_hovered(void))
+RECOMP_IMPORT("*", void dbgui_set_item_tooltip(const char *text))
+RECOMP_IMPORT("*", void dbgui_begin_disabled(long disabled))
+RECOMP_IMPORT("*", void dbgui_end_disabled(void))
 RECOMP_IMPORT("*", void dbgui_get_display_size(float *width, float *height))
 typedef struct {
     float r;
@@ -153,6 +162,7 @@ typedef struct {
 RECOMP_IMPORT("*", void dbgui_foreground_rect_filled(const DbgUiRectFilled *rect))
 
 RECOMP_IMPORT("*", void dbgui_textf(const char *fmt, ...))
+RECOMP_IMPORT("*", void dbgui_text_wrappedf(const char *fmt, ...))
 RECOMP_IMPORT("*", void dbgui_label_textf(const char *label, const char *fmt, ...))
 
 #endif
