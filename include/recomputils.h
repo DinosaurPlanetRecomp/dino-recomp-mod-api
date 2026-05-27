@@ -62,6 +62,7 @@ RECOMP_IMPORT("*", RecompAspectRatio recomp_get_aspect_ratio_mode(void))
 RECOMP_IMPORT("*", float recomp_get_aspect_ratio(void))
 RECOMP_IMPORT("*", RecompHUDRatio recomp_get_hud_ratio_mode(void))
 RECOMP_IMPORT("*", int recomp_get_refresh_rate(void))
+RECOMP_IMPORT("*", void recomp_set_60fps_enabled(int enabled))
 RECOMP_IMPORT("*", int recomp_get_60fps_enabled(void))
 
 RECOMP_IMPORT("*", void recomp_error_message_box(const char *message))
