@@ -185,6 +185,7 @@ RECOMP_IMPORT("*", void reasset_map_objects_delete(ReAssetID mapID, ReAssetID id
 RECOMP_IMPORT("*", ReAssetIterator reasset_map_objects_create_iterator(ReAssetID mapID));
 RECOMP_IMPORT("*", void reasset_map_objects_link(ReAssetID mapID, ReAssetID id, ReAssetID externID));
 RECOMP_IMPORT("*", ReAssetResolveMap reasset_map_objects_get_resolve_map(ReAssetID mapID));
+RECOMP_IMPORT("*", ReAssetResolveMap reasset_map_objects_get_global_resolve_map(void));
 RECOMP_IMPORT("*", ReAssetResolveMap reasset_map_objects_get_curve_resolve_map(void));
 
 
